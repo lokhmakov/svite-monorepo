@@ -1,0 +1,17 @@
+{
+  "name": "svite-monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:lokhmakov/svite-monorepo.git",
+  "author": "Pavel Lokhmakov <l.pavel.m@gmail.com>",
+  "license": "NOLICENSE",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "yarn --cwd apps/client dev",
+    "build": "yarn --cwd apps/client build"
+  }
+}
