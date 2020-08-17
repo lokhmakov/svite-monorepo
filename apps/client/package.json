@@ -1,0 +1,17 @@
+{
+  "name": "@svite-monorepo/client",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "svite",
+    "build": "svite build"
+  },
+  "dependencies": {
+    "@svite-monorepo/screens": "*",
+    "svelte": "3.24.1",
+    "svelte-hmr": "0.10.2",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "svite": "0.5.1-beta.0"
+  }
+}
