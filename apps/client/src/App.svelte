@@ -1,5 +1,5 @@
 <script>
-  import process from "@svite-monorepo/screens";
+  import { Button } from "@svite-monorepo/screens";
   import { v4 as uuid } from "uuid";
 
   const world = uuid();
@@ -14,4 +14,5 @@
 <h1>Hello {world}</h1>
 <p>Open App.svelte in your editor and change something to see HMR in action</p>
 
-<button on:click={process}>Click me</button>
+<Button />
+<!-- <button on:click={process}>Click me</button> -->
