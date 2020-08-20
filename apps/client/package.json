@@ -1,11 +1,13 @@
 {
-  "name": "@svite-monorepo/client",
+  "name": "@evokeme/client",
   "version": "0.0.0",
   "scripts": {
     "dev": "svite",
     "build": "svite build"
   },
   "dependencies": {
+    "@evokeme/state": "*",
+    "@evokeme/ui": "*",
     "@svite-monorepo/screens": "*",
     "svelte": "3.24.1",
     "svelte-hmr": "0.10.2",
