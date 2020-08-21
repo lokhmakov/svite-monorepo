@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: Svite application
+Resources:
+  function:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs12.x
+      CodeUri: function/.
+      Description: Fastify server for svite dist delivery
+      Timeout: 10
+      Policies:
+        - AWSLambdaBasicExecutionRole
+        - AWSLambdaReadOnlyAccess
+        - AWSXrayWriteOnlyAccess
+      Tracing: Active
+      Layers:
+        - !Ref libs
+  libs:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: evoke-me-node-layer
+      Description: Lambda fastify dependencies
+      ContentUri: lib/.
+      CompatibleRuntimes:
+        - nodejs12.x
