@@ -1,5 +1,10 @@
 {
-  "name": "@evokeme/state",
+  "name": "@evoke-me/state",
   "main": "src/index.js",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "license": "MIT",
+  "dependencies": {
+    "effector": "^21.2.2",
+    "patronum": "^0.106.0"
+  }
 }

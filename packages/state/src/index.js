@@ -1,1 +1,1 @@
-export default `@evokeme/state`;
+export {makeEntity} from './entity/make--entity'

@@ -4,7 +4,7 @@
   "main": "index.js",
   "repository": "git@github.com:lokhmakov/svite-monorepo.git",
   "author": "Pavel Lokhmakov <l.pavel.m@gmail.com>",
-  "license": "NOLICENSE",
+  "license": "MIT",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -12,6 +12,14 @@
   ],
   "scripts": {
     "dev": "yarn --cwd apps/client dev",
-    "build": "yarn --cwd apps/client build"
+    "build": "yarn --cwd apps/client build",
+    "aws:layer": "yarn --cwd apps/client aws:layer",
+    "aws:copy": "yarn --cwd apps/client aws:copy",
+    "aws:deploy": "yarn --cwd apps/client aws:deploy"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5",
+    "prettier-plugin-svelte": "^1.1.0",
+    "svelte": "^3.24.1"
   }
 }
