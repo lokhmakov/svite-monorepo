@@ -1,1 +1,0 @@
-export {SectionAuth} from './auth'

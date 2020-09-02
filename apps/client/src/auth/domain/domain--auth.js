@@ -6,8 +6,6 @@ const {$, domain, debug, on, run} = makeEntity({
   isDebugEvents: true,
 })
 
-on.singin = domain.event(`signin`)
-
 export const fromAuth = {
   $,
   domain,

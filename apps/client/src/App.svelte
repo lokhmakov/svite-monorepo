@@ -1,5 +1,5 @@
 <script>
-  import PageHome from "./page--home.svelte";
+  import PageHome from "pages/page--home.svelte";
 </script>
 
 <PageHome />

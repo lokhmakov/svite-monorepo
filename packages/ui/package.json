@@ -1,6 +1,0 @@
-{
-  "name": "@evoke-me/ui",
-  "svelte": "src/index.js",
-  "version": "0.0.1",
-  "license": "MIT"
-}

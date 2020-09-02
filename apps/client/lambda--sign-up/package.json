@@ -1,0 +1,14 @@
+{
+  "name": "@evoke-me/lambda--sign-up",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Pavel Lokhmakov <l.pavel.m@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "aws:layer": "./0-build-layer.sh",
+    "aws:copy": "./1-copy-dist.sh",
+    "aws:deploy": "./2-deploy.sh"
+  },
+  "dependencies": {}
+}
