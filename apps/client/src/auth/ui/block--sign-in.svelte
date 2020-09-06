@@ -78,9 +78,6 @@
         on:click|preventDefault={(e) => dispatch(`signIn`)}>
         Sign In
       </button>
-      <button class="buttonForgot disabled" type="button">
-        Forgot Password?
-      </button>
     </div>
   </form>
 </div>
