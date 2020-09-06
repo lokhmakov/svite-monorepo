@@ -1,1 +1,3 @@
-export {makeEntity} from './entity/make--entity'
+export * from './debug'
+export * from './entity'
+export * from './entity--doc'

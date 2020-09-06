@@ -1,10 +1,16 @@
-export function featureRemove({$, domain, debug, on, run}) {
+export function featureRemove({domain, main}) {
+  const $ = {}
+  const on = {}
+  const run = {}
+
   on.remove = domain.event(`remove`)
 
-  $.data.on(on.remove, (state, doc) => {
+  main.$.data.on(on.remove, (state, doc) => {
     const {[doc.id]: r, ...rest} = state
     return rest
   })
 
-  $.order.on(on.remove, (state, doc) => state.filter((v) => v !== doc.id))
+  main.$.order.on(on.remove, (state, doc) => state.filter((v) => v !== doc.id))
+
+  return {$, on, run}
 }

@@ -1,6 +1,12 @@
-export function featureCreate({$, domain, debug, on, run}) {
+export function featureCreate({domain, main}) {
+  const $ = {}
+  const on = {}
+  const run = {}
+
   on.create = domain.event(`create`)
 
-  $.data.on(on.create, (state, doc) => ({...state, [doc.id]: doc}))
-  $.order.on(on.create, (state, doc) => [...state, doc.id])
+  main.$.data.on(on.create, (state, doc) => ({...state, [doc.id]: doc}))
+  main.$.order.on(on.create, (state, doc) => [...state, doc.id])
+
+  return {$, on, run}
 }

@@ -1,7 +1,6 @@
 import {createDomain} from 'effector'
-// import createDebugger from 'debug'
-
-// const map = {}
+import {featureMain} from './feature--main'
+import {featureDebug} from './feature--debug'
 
 const $ = {}
 const on = {}
@@ -9,19 +8,10 @@ const run = {}
 
 const domain = createDomain()
 
-run._debug = domain.effect({
-  handler({who, args, isFolded = true}) {
-    const [name, ...rest] = args
-    if (isFolded) {
-      console.groupCollapsed(who.join(`.`), name)
-    } else {
-      console.group(who.join(`.`), name)
-    }
-    console.log(JSON.stringify(rest, null, 2))
-    console.groupEnd()
-  },
-})
+const main = featureMain({domain})
+const debug = featureDebug({domain, main})
 
-run.debug = run._debug
-
-export const fromDebug = {$, domain, on, run}
+export const fromDebug = {
+  main,
+  debug,
+}

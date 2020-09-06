@@ -1,15 +1,20 @@
 import {makeEntity} from '@evoke-me/state'
+import {makeAuthDoc} from './doc/make--auth--doc'
 
-const {$, domain, debug, on, run} = makeEntity({
-  who: [`@evoke-me`, `ui`, `auth`],
+export const fromEntity = makeEntity({
+  who: [`@evoke-me`, `auth`],
   isDebugStores: true,
   isDebugEvents: true,
+  isDebugEffects: true,
 })
 
+function makeDoc({id}) {
+  return makeAuthDoc({fromEntity, id})
+}
+
 export const fromAuth = {
-  $,
-  domain,
-  debug,
-  on,
-  run,
+  ...fromEntity,
+  utils: {
+    makeDoc,
+  },
 }

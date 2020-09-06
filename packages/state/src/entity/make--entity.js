@@ -1,6 +1,7 @@
 import {createDomain} from 'effector'
 import {fromDebug} from '../debug/domain--debug'
 
+import {featureMain} from './feature--main'
 import {featureCreate} from './feature--create'
 import {featureUpdate} from './feature--update'
 import {featureRemove} from './feature--remove'
@@ -15,49 +16,35 @@ export function makeEntity({
   isDebugEvents = false,
   isDebugStores = false,
 }) {
-  const debug = (...args) =>
-    fromDebug.run.debug({
-      who,
-      args,
-    })
-
-  const debugUnfolded = (...args) =>
-    fromDebug.run.debug({
-      who,
-      args,
-      isFolded: false,
-    })
+  const debug = (...args) => fromDebug.debug.run.debug({who, args})
 
   const domain = createDomain()
-  const $ = {}
-  const on = {}
-  const run = {}
 
   if (isDebugStores) {
     featureDebugStores({domain, debug})
   }
 
   if (isDebugEffects) {
-    featureDebugEffects({domain, debug: debugUnfolded})
+    featureDebugEffects({domain, debug})
   }
 
   if (isDebugEvents) {
-    featureDebugEvents({domain, debug: debugUnfolded})
+    featureDebugEvents({domain, debug})
   }
 
-  on.data = domain.event(`data`)
-  on.order = domain.event(`order`)
+  const main = featureMain({domain})
+  const create = featureCreate({domain, main})
+  const update = featureUpdate({domain, main})
+  const remove = featureRemove({domain, main})
+  const upsert = featureUpsert({domain, main, create, update})
 
-  $.data = domain.store({}, {name: `data`})
-  $.order = domain.store([], {name: `order`})
-
-  $.data.on(on.data, (state, v) => v)
-  $.order.on(on.order, (state, v) => v)
-
-  featureCreate({$, debug, domain, on, run})
-  featureUpdate({$, debug, domain, on, run})
-  featureRemove({$, debug, domain, on, run})
-  featureUpsert({$, debug, domain, on, run})
-
-  return {$, domain, debug, on, run}
+  return {
+    domain,
+    debug,
+    main,
+    create,
+    update,
+    remove,
+    upsert,
+  }
 }

@@ -4,3 +4,8 @@ node_modules
 dist
 dist-ssr
 lib
+
+.env
+.env.development
+.env.production
+.env.staging

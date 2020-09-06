@@ -1,0 +1,48 @@
+@base = {{$dotenv BASE_URL}}
+
+###
+# @name authLogin
+POST {{base}}/auth/local
+Content-Type: application/json
+
+{
+  "identifier": "user@gmail.com",
+  "password": "123456"
+}
+
+###
+
+@bearer={{authLogin.response.body.jwt}}
+
+###
+# @name viewQueryAll
+GET {{base}}/views
+
+###
+# @name viewQueryAllSortLimit
+GET {{base}}/views
+  ?_limit=10
+  &_sort=name
+
+###
+@viewQueryAll_0 = {{viewQueryAll.response.body.$[0].id}}
+@viewQueryAll_1 = {{viewQueryAll.response.body.$[1].id}}
+
+###
+# @name viewQueryById
+GET {{base}}/views/{{viewQueryAll_0}}
+
+###
+# @name viewCreate
+POST {{base}}/views
+Authorization: Bearer {{bearer}}
+Content-Type: application/json
+
+{
+  "name": "example"
+}
+
+###
+# @name viewRemove
+DELETE {{base}}/views/{{viewQueryAll_1}}
+Authorization: Bearer {{bearer}}
