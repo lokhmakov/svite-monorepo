@@ -3,3 +3,5 @@
 </script>
 
 <Button />
+<Button />
+<Button />
