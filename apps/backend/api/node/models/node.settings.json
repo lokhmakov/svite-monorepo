@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nodes",
+  "info": {
+    "name": "node"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "children": {
+      "collection": "node"
+    }
+  }
+}
