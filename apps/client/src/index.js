@@ -1,3 +1,5 @@
+import './configure'
+
 import App from './app.svelte'
 import './index.css'
 

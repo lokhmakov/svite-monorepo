@@ -1,6 +1,6 @@
 import {attach} from 'effector'
 
-import {authSignIn} from '../../api/auth--sign-in'
+import {authSignIn} from '../../api/sign-in'
 
 export function featureSignIn({debug, doc, domain, update}) {
   const $ = {}

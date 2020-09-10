@@ -1,0 +1,5 @@
+@base = {{$dotenv BASE_URL}}
+
+###
+# @name pmNodeListQuery
+GET {{base}}/nodes

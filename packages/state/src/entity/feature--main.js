@@ -3,6 +3,8 @@ export function featureMain({domain}) {
   const on = {}
   const run = {}
 
+  on.clear = domain.event(`clear`)
+
   on.data = domain.event(`data`)
   on.order = domain.event(`order`)
 
@@ -11,6 +13,9 @@ export function featureMain({domain}) {
 
   $.data.on(on.data, (state, v) => v)
   $.order.on(on.order, (state, v) => v)
+
+  $.order.reset(on.clear)
+  $.data.reset(on.clear)
 
   return {$, on, run}
 }
