@@ -13,6 +13,7 @@
   "dependencies": {
     "@evoke-me/config": "*",
     "@evoke-me/state": "*",
+    "d3": "^6.1.1",
     "effector": "^21.2.2",
     "patronum": "^0.106.0",
     "popmotion": "^8.7.5",

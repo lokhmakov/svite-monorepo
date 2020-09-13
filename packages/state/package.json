@@ -1,6 +1,6 @@
 {
   "name": "@evoke-me/state",
-  "main": "src/index.js",
+  "svelte": "src/index.js",
   "version": "0.0.1",
   "license": "MIT",
   "dependencies": {
