@@ -9,6 +9,7 @@ module.exports = {
       ...sviteExcludeShared([`../../packages`]),
       `fastify`,
       `fastify-static`,
+      `@roxi/routify`,
     ],
   },
   resolvers: [sviteResolverAbsolute],

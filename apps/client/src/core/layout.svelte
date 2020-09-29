@@ -13,12 +13,6 @@
     @apply text-center text-gray-500 font-semibold;
   }
 
-  :global(*) {
-    box-sizing: border-box;
-    user-select: none;
-    -moz-user-select: none;
-    font-family: sans-serif;
-  }
   :global(body) {
     padding: 0;
     margin: 0;
