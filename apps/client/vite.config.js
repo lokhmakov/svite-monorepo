@@ -5,7 +5,11 @@ const sviteExcludeShared = require(`./svite--exclude-shared`)
 module.exports = {
   plugins: [svite()],
   optimizeDeps: {
-    exclude: sviteExcludeShared([`../../packages`]),
+    exclude: [
+      ...sviteExcludeShared([`../../packages`]),
+      `fastify`,
+      `fastify-static`,
+    ],
   },
   resolvers: [sviteResolverAbsolute],
 }

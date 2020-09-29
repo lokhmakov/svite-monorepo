@@ -4,8 +4,22 @@
 
   // import SectionCenter from 'sections/section--center.svelte'
 
-  import SectionD31 from 'evoke-me--d3/ui/section--1--by-example.svelte'
+  // import SectionD3 from 'evoke-me--d3/mind-map/section--2.svelte'
 </script>
+
+<style>
+  div {
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  span {
+  }
+</style>
 
 <!-- <SectionCenter>
   <BlockEnter />
@@ -15,4 +29,6 @@
   <BlockPmNodeListView />
 </SectionCenter> -->
 
-<SectionD31 />
+<div class="bg-red-200"><span>555</span></div>
+
+<!-- <SectionD3 /> -->
