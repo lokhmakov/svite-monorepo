@@ -1,18 +1,8 @@
 <script>
-  // import {BlockEnter} from 'auth/ui'
-  // import {BlockPmNodeListView} from 'pm--node/ui'
-
-  // import SectionCenter from 'sections/section--center.svelte'
-
-  // import SectionD3 from 'evoke-me--d3/mind-map/section--2.svelte'
+  import BlockBox from 'core/block/block--box.svelte'
+  import SectionCenter from 'core/section/section--center.svelte'
 </script>
 
-<!-- <SectionCenter>
-  <BlockEnter />
+<SectionCenter debug>
+  <BlockBox debug label />
 </SectionCenter>
-
-<SectionCenter>
-  <BlockPmNodeListView />
-</SectionCenter> -->
-
-<!-- <SectionD3 /> -->

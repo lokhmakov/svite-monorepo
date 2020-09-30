@@ -29,7 +29,6 @@
     top: 0;
     left: 0;
     transform: translate(-50%, -50%);
-    -webkit-clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
     clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
   }
 
@@ -43,13 +42,11 @@
 
   h1::before {
     animation: crack1 2.5s linear forwards;
-    -webkit-clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
     clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
   }
 
   h1::after {
     animation: crack2 2.5s linear forwards;
-    -webkit-clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
     clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
   }
 

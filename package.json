@@ -18,8 +18,8 @@
     "aws:deploy": "yarn --cwd apps/client aws:deploy"
   },
   "devDependencies": {
-    "prettier": "^2.0.5",
-    "prettier-plugin-svelte": "^1.1.0"
+    "prettier": "^2.1.2",
+    "prettier-plugin-svelte": "^1.4.0"
   },
   "dependencies": {}
 }

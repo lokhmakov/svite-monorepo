@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.0.0
- * File generated Tue Sep 29 2020 11:37:10 GMT+0200 (Central European Summer Time)
+ * File generated Tue Sep 29 2020 22:20:59 GMT+0200 (Central European Summer Time)
  */
 
 export const __version = "2.0.0"
-export const __timestamp = "2020-09-29T09:37:10.056Z"
+export const __timestamp = "2020-09-29T20:20:59.825Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -18,12 +18,61 @@ export const options = {}
 
 //tree
 export const _tree = {
-  "name": "root",
-  "filepath": "/",
+  "name": "_layout",
+  "filepath": "/_layout.svelte",
   "root": true,
   "ownMeta": {},
-  "absolutePath": "src/pages",
+  "absolutePath": "/Users/lokhmakov/svite-monorepo/apps/client/src/pages/_layout.svelte",
   "children": [
+    {
+      "isFile": true,
+      "isDir": false,
+      "file": "_fallback.svelte",
+      "filepath": "/_fallback.svelte",
+      "name": "_fallback",
+      "ext": "svelte",
+      "badExt": false,
+      "absolutePath": "/Users/lokhmakov/svite-monorepo/apps/client/src/pages/_fallback.svelte",
+      "importPath": "../src/pages/_fallback.svelte",
+      "isLayout": false,
+      "isReset": false,
+      "isIndex": false,
+      "isFallback": true,
+      "isPage": false,
+      "ownMeta": {},
+      "meta": {
+        "preload": false,
+        "prerender": true,
+        "precache-order": false,
+        "precache-proximity": true,
+        "recursive": true
+      },
+      "path": "/_fallback",
+      "id": "__fallback",
+      "component": () => import('../src/pages/_fallback.svelte').then(m => m.default)
+    },
+    {
+      "isFile": true,
+      "isDir": false,
+      "file": "buttons.svelte",
+      "filepath": "/buttons.svelte",
+      "name": "buttons",
+      "ext": "svelte",
+      "badExt": false,
+      "absolutePath": "/Users/lokhmakov/svite-monorepo/apps/client/src/pages/buttons.svelte",
+      "importPath": "../src/pages/buttons.svelte",
+      "ownMeta": {},
+      "meta": {
+        "preload": false,
+        "prerender": true,
+        "precache-order": false,
+        "precache-proximity": true,
+        "recursive": true
+      },
+      "path": "/buttons",
+      "id": "_buttons",
+      "component": () => import('../src/pages/buttons.svelte').then(m => m.default)
+    },
     {
       "isFile": true,
       "isDir": false,
@@ -54,6 +103,33 @@ export const _tree = {
     {
       "isFile": true,
       "isDir": false,
+      "file": "loaders.svelte",
+      "filepath": "/loaders.svelte",
+      "name": "loaders",
+      "ext": "svelte",
+      "badExt": false,
+      "absolutePath": "/Users/lokhmakov/svite-monorepo/apps/client/src/pages/loaders.svelte",
+      "importPath": "../src/pages/loaders.svelte",
+      "isLayout": false,
+      "isReset": false,
+      "isIndex": false,
+      "isFallback": false,
+      "isPage": true,
+      "ownMeta": {},
+      "meta": {
+        "preload": false,
+        "prerender": true,
+        "precache-order": false,
+        "precache-proximity": true,
+        "recursive": true
+      },
+      "path": "/loaders",
+      "id": "_loaders",
+      "component": () => import('../src/pages/loaders.svelte').then(m => m.default)
+    },
+    {
+      "isFile": true,
+      "isDir": false,
       "file": "text.svelte",
       "filepath": "/text.svelte",
       "name": "text",
@@ -79,10 +155,16 @@ export const _tree = {
       "component": () => import('../src/pages/text.svelte').then(m => m.default)
     }
   ],
-  "isLayout": false,
+  "isLayout": true,
   "isReset": false,
   "isIndex": false,
   "isFallback": false,
+  "isPage": false,
+  "isFile": true,
+  "file": "_layout.svelte",
+  "ext": "svelte",
+  "badExt": false,
+  "importPath": "../src/pages/_layout.svelte",
   "meta": {
     "preload": false,
     "prerender": true,
@@ -90,7 +172,9 @@ export const _tree = {
     "precache-proximity": true,
     "recursive": true
   },
-  "path": "/"
+  "path": "/",
+  "id": "__layout",
+  "component": () => import('../src/pages/_layout.svelte').then(m => m.default)
 }
 
 
