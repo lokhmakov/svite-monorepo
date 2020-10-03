@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.0.0
- * File generated Tue Sep 29 2020 22:20:59 GMT+0200 (Central European Summer Time)
+ * File generated Sat Oct 03 2020 21:06:20 GMT+0200 (Central European Summer Time)
  */
 
 export const __version = "2.0.0"
-export const __timestamp = "2020-09-29T20:20:59.825Z"
+export const __timestamp = "2020-10-03T19:06:20.296Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -126,6 +126,33 @@ export const _tree = {
       "path": "/loaders",
       "id": "_loaders",
       "component": () => import('../src/pages/loaders.svelte').then(m => m.default)
+    },
+    {
+      "isFile": true,
+      "isDir": false,
+      "file": "sections.svelte",
+      "filepath": "/sections.svelte",
+      "name": "sections",
+      "ext": "svelte",
+      "badExt": false,
+      "absolutePath": "/Users/lokhmakov/svite-monorepo/apps/client/src/pages/sections.svelte",
+      "importPath": "../src/pages/sections.svelte",
+      "isLayout": false,
+      "isReset": false,
+      "isIndex": false,
+      "isFallback": false,
+      "isPage": true,
+      "ownMeta": {},
+      "meta": {
+        "preload": false,
+        "prerender": true,
+        "precache-order": false,
+        "precache-proximity": true,
+        "recursive": true
+      },
+      "path": "/sections",
+      "id": "_sections",
+      "component": () => import('../src/pages/sections.svelte').then(m => m.default)
     },
     {
       "isFile": true,

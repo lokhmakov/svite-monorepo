@@ -1,5 +1,5 @@
 <script>
-  import ScreenHome from 'screens/screen--home.svelte'
+import ScreenHome from 'screens/screen--home.svelte'
 </script>
 
-<ScreenHome />
+<ScreenHome label="bar" />

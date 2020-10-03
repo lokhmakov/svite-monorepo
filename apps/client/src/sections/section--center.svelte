@@ -1,9 +1,9 @@
-<style type="postcss">
-  div {
-    @apply flex justify-center;
-  }
-</style>
-
-<div class={$$props.class}>
+<div class="{$$props.class}">
   <slot />
 </div>
+
+<style type="postcss">
+div {
+  @apply flex justify-center;
+}
+</style>

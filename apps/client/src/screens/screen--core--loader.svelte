@@ -1,15 +1,9 @@
 <script>
-  import BlockBox from 'core/block/block--box.svelte'
-  import SectionCenter from 'core/section/section--center.svelte'
-  import LoaderTimer from 'core/loader/loader--timer.svelte'
-  import LoaderTyping from 'core/loader/loader--typing.svelte'
+import BlockBox from 'core/block/block--box.svelte'
+import SectionCenter from 'core/sections/section--center.svelte'
+import LoaderTimer from 'core/loaders/timer.svelte'
+import LoaderTyping from 'core/loaders/typing.svelte'
 </script>
-
-<style type="postcss">
-  .screen :global(.first) {
-    @apply bg-gray-600;
-  }
-</style>
 
 <div class="screen">
   <SectionCenter class="first" debug>
@@ -22,3 +16,9 @@
     </BlockBox>
   </SectionCenter>
 </div>
+
+<style type="postcss">
+.screen :global(.first) {
+  @apply bg-gray-600;
+}
+</style>
